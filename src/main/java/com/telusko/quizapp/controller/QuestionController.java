@@ -28,7 +28,9 @@ public class QuestionController {
     }
 
     @PostMapping("addQuestion")
-    public ResponseEntity<String> addQuestion(@RequestBody Question question){
+    public ResponseEntity<String> addQuestion(@RequestBody Question question){//Spring says you just specify the
+        // JSON I will convert that into an object but you have to also mention a request body because
+        // you are sending this data in the request from the client side to the server
         return questionService.addQuestion(question);
 
     }
